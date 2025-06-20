@@ -2,6 +2,7 @@ enum VideoQuality {
   DefaultQuality,
   LowQuality,
   MediumQuality,
+  HighQuality,
   HighestQuality,
   Res640x480Quality,
   Res960x540Quality,

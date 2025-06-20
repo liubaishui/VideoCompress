@@ -103,6 +103,9 @@ class VideoCompressPlugin : MethodCallHandler, FlutterPlugin {
                         videoTrackStrategy = DefaultVideoStrategy.atMost(640).build()
                     }
                     3 -> {
+                        videoTrackStrategy = DefaultVideoStrategy.atMost(1080).build()
+                    }
+                    4 -> {
 
                         assert(value = frameRate != null)
                         videoTrackStrategy = DefaultVideoStrategy.Builder()
@@ -111,16 +114,16 @@ class VideoCompressPlugin : MethodCallHandler, FlutterPlugin {
                                 .frameRate(frameRate!!) // will be capped to the input frameRate
                                 .build()
                     }
-                    4 -> {
+                    5 -> {
                         videoTrackStrategy = DefaultVideoStrategy.atMost(480, 640).build()
                     }
-                    5 -> {
+                    6 -> {
                         videoTrackStrategy = DefaultVideoStrategy.atMost(540, 960).build()
                     }
-                    6 -> {
+                    7 -> {
                         videoTrackStrategy = DefaultVideoStrategy.atMost(720, 1280).build()
                     }
-                    7 -> {
+                    8 -> {
                         videoTrackStrategy = DefaultVideoStrategy.atMost(1080, 1920).build()
                     }                    
                 }
